@@ -11,6 +11,7 @@ body {
     animation: overflow .7s ease 5.5s 1 normal forwards;
     padding-bottom:52px ;
     scroll-behavior: smooth;
+    overflow: hidden;
    
 }
 

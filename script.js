@@ -47,13 +47,14 @@ function downloadPDF() {
     });
 }
 let profileCard = document.querySelector(".profile-card");
+let html = document.querySelector("html");
 document.querySelector(".circle-1").addEventListener("click", () => {
     profileCard.style.display = "grid";
-    document.body.style.overflow = "hidden";
+    html.style.overflow = "hidden";
 });
 profileCard.addEventListener("click", () => {
     profileCard.style.display = "none";
-    document.body.style.overflow = " visible";
+    html.style.overflow = "visible";
 });
 
 let output = document.querySelector("#preview");
@@ -74,7 +75,7 @@ lucide.createIcons();
 
 function hideLoader() {
     let loader = document.querySelector(".loader-container");
-        loader.style.display = 'none';
+    loader.style.display = 'none';
 }
 
 window.addEventListener("load", function () {

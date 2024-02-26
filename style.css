@@ -111,7 +111,7 @@ main::-webkit-scrollbar-button {
 }
 
 body::-webkit-scrollbar {
-    width: 0px;
+    width: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

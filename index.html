@@ -50,8 +50,7 @@
     <!-- css  -->
     <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <main style="overflow: scroll; overflow-x: hidden;">
+<body >
     <!-- loader -->
     <div class="loader-container">
         <div class="loader">
@@ -60,7 +59,7 @@
             <div class="box3"></div>
           </div>
     </div>
-    <div class="container mx-auto" >
+    <div class="container mx-auto"  >
         <nav class="p-2 h-12 top-0 flex fixed left-0 z-40 w-full justify-evenly items-center">
             <a href="" style="text-decoration: none; color: #01a0e4">
                 <div class="logo-icon" title="EasyDoc">
@@ -86,19 +85,10 @@
                 <img src="https://avatars.githubusercontent.com/u/123060177?v=4" alt="" />
             </div>
         </nav>
-        <button class="previewBtn">
-            <span id="previewBtnName">Preview</span>
-            <div class="icon" onclick="downloadPDF()">
-                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                        fill="currentColor"></path>
-                </svg>
-            </div>
-        </button>
+      
         <div class="top relative">
             <div id="editor" class="border rounded-r"></div>
-            <div id="preview" class="border rounded-l">
+            <div id="preview" class="border rounded-l" id="top">
                 <button class="Btn" onclick="downloadPDF()">
                     <svg class="svgIcon" viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -111,6 +101,18 @@
                 <div id="output"></div>
             </div>
         </div>
+        <a href="#top">
+            <button class="previewBtn">
+                <span id="previewBtnName">Preview</span>
+                <div class="icon" onclick="downloadPDF()">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                            fill="currentColor"></path>
+                    </svg>
+                </div>
+            </button>
+        </a>
         <div class="footer">
             <div class="social-links">
                 <a href="https://github.com/ahkamboh" target="_blank">
@@ -181,7 +183,7 @@
             </div>
         </div>
     </div>
-</main>
+
     <script src="script.js"></script>
 </body>
 </html>

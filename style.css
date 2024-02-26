@@ -6,23 +6,20 @@ body {
         Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     font-size: 16px;
     line-height: 1.5;
-    padding-bottom: 56px;
     word-wrap: break-word;
     -webkit-tap-highlight-color: transparent;
-    animation: overflow  .7s ease 5.5s 1 normal forwards;
+    animation: overflow .7s ease 5.5s 1 normal forwards;
     overflow: hidden;
 }
 
-@keyframes overflow {
-    0% {
-     overflow: hidden;
-    }
-  
-    100% {
-        overflow: visible;
-    
-    }
-  }
+main {
+    position: relative;
+    top: 1px;
+    width: 100%;
+    height: 100%;
+    padding: 5px
+}
+
 .poppins-light {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
@@ -106,13 +103,17 @@ nav {
     background: #01a0e400;
 }
 
+main::-webkit-scrollbar-button {
+    height: 70px;
+}
+
 body::-webkit-scrollbar {
-    width: 4px;
+    width: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #01a0e4;
-    cursor: pointer;
+
 }
 
 .mx-auto {
@@ -174,7 +175,7 @@ body::-webkit-scrollbar {
 }
 
 .top {
-    top: 55px;
+    top: 65px;
     display: grid;
     height: 100%;
     position: relative;
@@ -471,7 +472,7 @@ a:hover {
 .footer {
     position: relative;
     width: 100%;
-    top: 60px;
+    top: 70px;
     border-radius: 0.25rem;
     display: flex;
     flex-direction: column;
@@ -624,7 +625,7 @@ a:hover {
         position: relative;
         width: 100%;
         height: 50px;
-        top: 60px;
+        top: 70px;
         border-radius: 0.25rem;
         display: flex;
         border: 1px solid rgba(0, 0, 0, 0.22);
@@ -641,7 +642,7 @@ a:hover {
 }
 
 
-.loader-container{
+.loader-container {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -658,247 +659,246 @@ a:hover {
 
 @keyframes fade {
     0% {
-      opacity: 1;
+        opacity: 1;
     }
-  
+
     100% {
-      opacity: 0;
-      z-index: -1;
-    
+        opacity: 0;
+        z-index: -1;
+
     }
-  }
+}
 
 .loader {
     width: 112px;
     height: 112px;
-  }
-  
-  .box1,
-  .box2,
-  .box3 {
-    border: 16px solid rgba(5,76,226,1) ;
+}
+
+.box1,
+.box2,
+.box3 {
+    border: 16px solid rgba(5, 76, 226, 1);
     box-sizing: border-box;
     position: absolute;
     display: block;
-    
-  }
-  
-  .box1 {
+
+}
+
+.box1 {
     width: 112px;
     height: 48px;
     margin-top: 64px;
     margin-left: 0px;
     animation: abox1 4s 1s forwards ease-in-out infinite;
-  }
-  
-  .box2 {
+}
+
+.box2 {
     width: 48px;
     height: 48px;
     margin-top: 0px;
     margin-left: 0px;
     animation: abox2 4s 1s forwards ease-in-out infinite;
-  }
-  
-  .box3 {
+}
+
+.box3 {
     width: 48px;
     height: 48px;
     margin-top: 0px;
     margin-left: 64px;
     animation: abox3 4s 1s forwards ease-in-out infinite;
-  }
-  
-  @keyframes abox1 {
+}
+
+@keyframes abox1 {
     0% {
-      width: 112px;
-      height: 48px;
-      margin-top: 64px;
-      margin-left: 0px;
+        width: 112px;
+        height: 48px;
+        margin-top: 64px;
+        margin-left: 0px;
     }
-  
+
     12.5% {
-      width: 48px;
-      height: 48px;
-      margin-top: 64px;
-      margin-left: 0px;
+        width: 48px;
+        height: 48px;
+        margin-top: 64px;
+        margin-left: 0px;
     }
-  
+
     25% {
-      width: 48px;
-      height: 48px;
-      margin-top: 64px;
-      margin-left: 0px;
+        width: 48px;
+        height: 48px;
+        margin-top: 64px;
+        margin-left: 0px;
     }
-  
+
     37.5% {
-      width: 48px;
-      height: 48px;
-      margin-top: 64px;
-      margin-left: 0px;
+        width: 48px;
+        height: 48px;
+        margin-top: 64px;
+        margin-left: 0px;
     }
-  
+
     50% {
-      width: 48px;
-      height: 48px;
-      margin-top: 64px;
-      margin-left: 0px;
+        width: 48px;
+        height: 48px;
+        margin-top: 64px;
+        margin-left: 0px;
     }
-  
+
     62.5% {
-      width: 48px;
-      height: 48px;
-      margin-top: 64px;
-      margin-left: 0px;
+        width: 48px;
+        height: 48px;
+        margin-top: 64px;
+        margin-left: 0px;
     }
-  
+
     75% {
-      width: 48px;
-      height: 112px;
-      margin-top: 0px;
-      margin-left: 0px;
+        width: 48px;
+        height: 112px;
+        margin-top: 0px;
+        margin-left: 0px;
     }
-  
+
     87.5% {
-      width: 48px;
-      height: 48px;
-      margin-top: 0px;
-      margin-left: 0px;
+        width: 48px;
+        height: 48px;
+        margin-top: 0px;
+        margin-left: 0px;
     }
-  
+
     100% {
-      width: 48px;
-      height: 48px;
-      margin-top: 0px;
-      margin-left: 0px;
+        width: 48px;
+        height: 48px;
+        margin-top: 0px;
+        margin-left: 0px;
     }
-  }
-  
-  @keyframes abox2 {
+}
+
+@keyframes abox2 {
     0% {
-      width: 48px;
-      height: 48px;
-      margin-top: 0px;
-      margin-left: 0px;
+        width: 48px;
+        height: 48px;
+        margin-top: 0px;
+        margin-left: 0px;
     }
-  
+
     12.5% {
-      width: 48px;
-      height: 48px;
-      margin-top: 0px;
-      margin-left: 0px;
+        width: 48px;
+        height: 48px;
+        margin-top: 0px;
+        margin-left: 0px;
     }
-  
+
     25% {
-      width: 48px;
-      height: 48px;
-      margin-top: 0px;
-      margin-left: 0px;
+        width: 48px;
+        height: 48px;
+        margin-top: 0px;
+        margin-left: 0px;
     }
-  
+
     37.5% {
-      width: 48px;
-      height: 48px;
-      margin-top: 0px;
-      margin-left: 0px;
+        width: 48px;
+        height: 48px;
+        margin-top: 0px;
+        margin-left: 0px;
     }
-  
+
     50% {
-      width: 112px;
-      height: 48px;
-      margin-top: 0px;
-      margin-left: 0px;
+        width: 112px;
+        height: 48px;
+        margin-top: 0px;
+        margin-left: 0px;
     }
-  
+
     62.5% {
-      width: 48px;
-      height: 48px;
-      margin-top: 0px;
-      margin-left: 64px;
+        width: 48px;
+        height: 48px;
+        margin-top: 0px;
+        margin-left: 64px;
     }
-  
+
     75% {
-      width: 48px;
-      height: 48px;
-      margin-top: 0px;
-      margin-left: 64px;
+        width: 48px;
+        height: 48px;
+        margin-top: 0px;
+        margin-left: 64px;
     }
-  
+
     87.5% {
-      width: 48px;
-      height: 48px;
-      margin-top: 0px;
-      margin-left: 64px;
+        width: 48px;
+        height: 48px;
+        margin-top: 0px;
+        margin-left: 64px;
     }
-  
+
     100% {
-      width: 48px;
-      height: 48px;
-      margin-top: 0px;
-      margin-left: 64px;
+        width: 48px;
+        height: 48px;
+        margin-top: 0px;
+        margin-left: 64px;
     }
-  }
-  
-  @keyframes abox3 {
+}
+
+@keyframes abox3 {
     0% {
-      width: 48px;
-      height: 48px;
-      margin-top: 0px;
-      margin-left: 64px;
+        width: 48px;
+        height: 48px;
+        margin-top: 0px;
+        margin-left: 64px;
     }
-  
+
     12.5% {
-      width: 48px;
-      height: 48px;
-      margin-top: 0px;
-      margin-left: 64px;
+        width: 48px;
+        height: 48px;
+        margin-top: 0px;
+        margin-left: 64px;
     }
-  
+
     25% {
-      width: 48px;
-      height: 112px;
-      margin-top: 0px;
-      margin-left: 64px;
+        width: 48px;
+        height: 112px;
+        margin-top: 0px;
+        margin-left: 64px;
     }
-  
+
     37.5% {
-      width: 48px;
-      height: 48px;
-      margin-top: 64px;
-      margin-left: 64px;
+        width: 48px;
+        height: 48px;
+        margin-top: 64px;
+        margin-left: 64px;
     }
-  
+
     50% {
-      width: 48px;
-      height: 48px;
-      margin-top: 64px;
-      margin-left: 64px;
+        width: 48px;
+        height: 48px;
+        margin-top: 64px;
+        margin-left: 64px;
     }
-  
+
     62.5% {
-      width: 48px;
-      height: 48px;
-      margin-top: 64px;
-      margin-left: 64px;
+        width: 48px;
+        height: 48px;
+        margin-top: 64px;
+        margin-left: 64px;
     }
-  
+
     75% {
-      width: 48px;
-      height: 48px;
-      margin-top: 64px;
-      margin-left: 64px;
+        width: 48px;
+        height: 48px;
+        margin-top: 64px;
+        margin-left: 64px;
     }
-  
+
     87.5% {
-      width: 48px;
-      height: 48px;
-      margin-top: 64px;
-      margin-left: 64px;
+        width: 48px;
+        height: 48px;
+        margin-top: 64px;
+        margin-left: 64px;
     }
-  
+
     100% {
-      width: 112px;
-      height: 48px;
-      margin-top: 64px;
-      margin-left: 0px;
+        width: 112px;
+        height: 48px;
+        margin-top: 64px;
+        margin-left: 0px;
     }
-  }
-  
+}

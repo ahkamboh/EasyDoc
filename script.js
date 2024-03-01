@@ -33,17 +33,32 @@ function changeTheme() {
     preview.classList.remove(...preview.classList);
     preview.classList.add(theme);
 }
+// function downloadPDF() {
+//     updatePreview();
+//     const element = document.getElementById("output");
+//     // Create PDF using html2pdf
+//     html2pdf(element, {
+//         margin: 10,
+//         filename: "output.pdf",
+//         image: { type: "png", quality: 10 },
+//         html2canvas: { scale: 2 },
+//         jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+//     });
+// }
+window.jsPDF = window.jspdf.jsPDF;
+var docPDF = new jsPDF();
 
-function downloadPDF() {
+function downloadPDF(invoiceNo){
     updatePreview();
-    const element = document.getElementById("output");
-    // Create PDF using html2pdf
-    html2pdf(element, {
-        margin: 10,
-        filename: "output.pdf",
-        image: { type: "png", quality: 10 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+    var elementHTML = document.querySelector("#output");
+    docPDF.html(elementHTML, {
+        callback: function(docPDF) {
+            docPDF.save(invoiceNo+'.pdf');
+        },
+        x: 15,
+        y: 15,
+        width: 170,
+        windowWidth: 650
     });
 }
 let profileCard = document.querySelector(".profile-card");

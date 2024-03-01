@@ -11,9 +11,11 @@
     <meta property="og:description" content="EasyDoc is a software tool that enables to write, edit, and manage their documents efficiently." />
     <title>EasyDoc || Ali Hamza Kamboh || ahkamboh</title>
     <link rel="icon" href="ah-icon.png" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
     <!-- Showdown JS -->
     <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
     <!-- Prism JS -->
@@ -87,7 +89,7 @@
         <div class="top relative">
             <div id="editor" class="border rounded-r"></div>
             <div id="preview" class="border rounded-l" id="top">
-                <button class="Btn" onclick="downloadPDF()">
+                <button class="Btn" onclick="downloadPDF('EasyDoc(ahkamboh)')">
                     <svg class="svgIcon" viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z">
@@ -102,7 +104,7 @@
         <a href="#top">
             <button class="previewBtn">
                 <span id="previewBtnName">Preview</span>
-                <div class="icon" onclick="downloadPDF()">
+                <div class="icon" onclick="downloadPDF('EasyDoc(ahkamboh)')">
                     <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"

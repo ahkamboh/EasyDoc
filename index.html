@@ -42,6 +42,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/addon/edit/closebrackets.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/addon/edit/matchbrackets.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/addon/comment/comment.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/showdown-table/dist/showdown-table.min.js"></script>
+
     <!-- Prism Theme -->
     <script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.11/dist/interact.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
@@ -52,13 +54,13 @@
 </head>
 <body >
     <!-- loader -->
-    <div class="loader-container">
+    <!-- <div class="loader-container">
         <div class="loader">
             <div class="box1"></div>
             <div class="box2"></div>
             <div class="box3"></div>
           </div>
-    </div>
+    </div> -->
     <div class="container mx-auto"  >
         <nav class="p-2 h-12 top-0 flex fixed left-0 z-40 w-full justify-evenly items-center">
             <a href="" style="text-decoration: none; color: #01a0e4">
@@ -85,9 +87,36 @@
                 <img src="https://avatars.githubusercontent.com/u/123060177?v=4" alt="" />
             </div>
         </nav>
-      
-        <div class="top relative">
-            <div id="editor" class="border rounded-r"></div>
+        <div class="top relative">   
+        <div class="d" style="position: relative; width: 100%;"> 
+            <div class="" style=" z-index: 10; width: 100%; ;">
+                <div class="messageBox">
+                    <input
+                      required=""
+                      placeholder="Generate by Ai....."
+                      type="text"
+                      id="messageInput"
+                      autocomplete="off"
+                    />
+                    <button id="sendButton">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 664 663">
+                        <path
+                          fill="none"
+                          d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888"
+                        ></path>
+                        <path
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                          stroke-width="33.67"
+                          stroke="#6c6c6c"
+                          d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div> 
+            </div>   
+            <div id="editor" class="border rounded-r" ></div>
+        </div>  
             <div id="preview" class="border rounded-l" id="top">
                 <button class="Btn" onclick="downloadPDF('EasyDoc(ahkamboh)')">
                     <svg class="svgIcon" viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg">
@@ -165,6 +194,7 @@
                             style="color: #01a0e4; font-weight: 500">ALI HAMZA KAMBOH</a>
                         for alerts.
                     </p>
+                    <input hidden id="xcdsasasasa" value="AIzaSyC-IHRSLmAL645a2zbXo3ngz0C7XsnkRJM"></input>
                     <div class="social-icon">
                         <a href="https://x.com/alihamzakambohh" target="_blank">
                             <svg height="23" width="23" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
